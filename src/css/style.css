@@ -1,0 +1,252 @@
+body {
+  font-family: 'Comic', serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 2rem; /* Trocado de px para rem */
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  position: relative;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* sobreposição com 30% de opacidade */
+  z-index: -1; /* para não sobrepor o conteúdo */
+}
+
+@font-face {
+    font-family: 'Chillen-titulo';
+    src: url('fontes/Chillen-titulo.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'CodeSaver-Regular.otf';
+    src: url(/fontes/CodeSaver-Regular.otf);
+  }
+  
+  .cabecalho{
+    display: flex;
+    justify-content: center;
+    color: #dfd8d8;
+    font-size: 18px;
+    font-family: 'Chillen-titulo', sans-serif; 
+    animation: fadeIn 2s forwards;   
+  }
+    
+  .botoesiniciais ul {
+    list-style: none;
+    padding: 5px;
+    margin: 5px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    font-family: 'CodeSaver-Regular.otf', sans-serif;
+    gap: 20px;
+  }
+  
+  .botoesiniciais li {
+    margin-right: 5px;
+  }
+  
+  .botoesiniciais a {
+    text-decoration: none;
+    color: #dfd8df;
+    background-color: #8ba1b5;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.3s ease; /* adicionei transform */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* sombra mais suave */
+}
+
+.botoesiniciais a:hover {
+  background-color: #628cb3;
+  transform: translateY(-2px); /* efeito de elevar o botão ao passar o mouse */
+}
+
+.projeto {
+  display: flex;
+  flex-direction: column; /* Organiza os itens (imagem, link e descrição) em uma coluna */
+  align-items: center; /* Centraliza todos os itens dentro do projeto */
+  margin-bottom: 30px; /* Espaçamento entre os projetos */
+  text-align: center; /* Alinha o texto centralizado */
+  border: 1px solid #ccc; /* Borda fina em volta de cada projeto */
+  border-radius: 10px; /* Borda arredondada */
+  padding: 20px; /* Espaçamento interno */
+  background-color: #f5f5f5; /* Cor de fundo suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para efeitos de hover */
+}
+
+.projeto a {
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none; /* Remove o sublinhado */
+  border: none;
+  border-radius: 5px;
+  background-color: #dfd8d8; /* Cor de fundo */
+  color: #000; /* Cor do texto */
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave de cor */
+  font-family: 'Chillen-titulo', sans-serif; /* Fonte personalizada */
+  margin-left: 10px; /* Espaço entre o ícone e o texto */
+}
+
+.projeto a:hover {
+  background-color: #628cb3; /* Cor de fundo ao passar o mouse */
+  color: white; /* Altera a cor do texto ao passar o mouse */
+}
+
+  #home p{
+    font-family: 'CodeSaver-Regular.otf', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  #sobre p{
+    font-family: 'CodeSaver-Regular.otf', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  #projetos h3 {
+    font-family: 'Chillen-titulo.ttf', sans-serif;
+    font-size: 18px;
+    margin: 15px;
+    background-color:#f5f5f5; /* Cor de fundo suave */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    padding: 15px;
+    width: 50%; /* Ajusta a largura do elemento */
+    margin-left: auto; /* Alinha à esquerda automaticamente */
+    margin-right: auto; /* Alinha à direita automaticamente */
+}
+
+  .projeto img {
+    width: 80%; /* Ajusta a largura da imagem */
+    max-width: 500px; /* Limita a largura máxima da imagem */
+    border-radius: 10px; /* Bordas arredondadas na imagem */
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+    margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+  }
+
+  #projetos .descricao {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8; /* Aumentado o espaçamento entre as linhas */
+    font-family: 'CodeSaver-Regular.otf', sans-serif;
+    max-width: 80%;
+    margin-top: 1.5rem; /* Aumento no espaçamento superior */
+    background-color: #f9f9f9; /* Cor de fundo suave */
+    padding: 1rem; /* Adiciona um padding para o texto não ficar muito perto da borda */
+    border-radius: 10px;
+  }
+
+  #contato img {
+    width: 50px; /* largura da imagem */
+    height: 50px; /* altura da imagem */
+    object-fit: cover; /* ajusta a imagem para caber no container */
+    border-radius: 50%; /* arredonda as bordas da imagem */
+    margin: 10px; /* adiciona um espaçamento ao redor da imagem */
+  }
+
+  #home h2, #sobre h2, #projetos h2, #contato h2 {
+    font-family: 'Chillen-titulo', sans-serif;
+    font-size: 25px;
+    margin: 15px;
+    color: #dfd8d8;
+    opacity: 0;
+    animation: fadeIn 2s forwards; /* animação de fade */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+  .projeto img {
+      width: 90%;
+      height: auto;
+  }
+
+  .botoesiniciais ul {
+      flex-direction: column;
+      gap: 1rem; /* Maior espaçamento entre os botões em telas menores */
+  }
+
+  .projeto a {
+    padding: 12px 24px; /* Aumentar o tamanho do botão em telas pequenas */
+  }
+}
+
+.contato-link {
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none; /* Remove o sublinhado */
+  border: none;
+  border-radius: 5px;
+  background-color: #dfd8d8; /* Cor de fundo */
+  color: #000; /* Cor do texto */
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transição suave de cor */
+  font-family: 'Chillen-titulo', sans-serif; /* Fonte personalizada */
+  margin-left: 10px; /* Espaço entre o ícone e o texto */
+}
+
+/* Efeito de hover no link */
+.contato-link:hover {
+  background-color: #628cb3; /* Cor de fundo ao passar o mouse */
+  color: white; /* Altera a cor do texto ao passar o mouse */
+}
+
+/* Estilo dos itens de contato (alinha o ícone e o link) */
+.contato-item {
+  display: flex;
+  align-items: center; /* Alinha verticalmente o ícone e o link */
+  margin-bottom: 20px; /* Espaço entre os itens de contato */
+}
+
+.contato-item img {
+  width: 40px; /* Tamanho fixo para os ícones */
+  height: 40px; /* Tamanho fixo para os ícones */
+  object-fit: contain; /* Garante que a imagem seja redimensionada sem distorção */
+}
+
+h2 {
+  font-family: 'Chillen-titulo', sans-serif;
+  font-size: 30px; /* Aumentado para uma aparência mais impactante */
+  margin: 15px;
+  color: #dfd8d8;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
