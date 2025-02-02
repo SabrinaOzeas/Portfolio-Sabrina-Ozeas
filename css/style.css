@@ -1,16 +1,18 @@
 body {
   font-family: 'Comic', serif;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; /* Garantir que o fundo cubra toda a área */
+  background-position: center; /* Centraliza o fundo */
   display: flex;
   justify-content: center;
   flex-direction: column;
-  min-height: 100vh;
-  gap: 2rem; /* Trocado de px para rem */
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+  gap: 2rem;
+  background-color: #0093E9; /* Cor de fallback */
+  background-image: linear-gradient(160deg, #0093E9 0%, #FFB6C1 100%);
   position: relative;
 }
+
 
 body::after {
   content: '';
@@ -41,6 +43,24 @@ body::after {
     font-family: 'Chillen-titulo', sans-serif; 
     animation: fadeIn 2s forwards;   
   }
+
+  .container {
+  display: flex;
+  align-items: center; /* Alinha verticalmente os itens */
+}
+
+.imagem-redonda {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px; /* Adiciona espaçamento à direita da imagem */
+}
+
+p {
+  margin: 0; /* Se necessário, remover a margem padrão do parágrafo */
+  padding-left: 20px; /* Dá espaçamento entre a imagem e o parágrafo */
+}
     
   .botoesiniciais ul {
     list-style: none;
